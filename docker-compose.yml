@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+
+  app:
+    hostname: 'canvas-lms'
+    container_name: 'canvas-lms'
+    image: lbjay/canvas-docker
+    ports:
+      - 3333:3000
+    volumes:
+      - ./.dump:/var/lib/postgresql/data
+#    environment:
+#      - MAIL_DELIVERY_METHOD=smtp
+#      - SMTP_ADDRESS=smtp.mandrillapp.com
+#      - SMTP_PORT=587
+#      - SMTP_USER=<mandrill_user>
+#      - SMTP_PASS=<mandrill_api_key>
